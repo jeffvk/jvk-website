@@ -1,0 +1,15 @@
+/* Starter CSS */
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+html {
+    color: #222;
+    font-size: 1em;
+    line-height: 1.4;
+    font-family: sans-serif;
+    scroll-behavior: smooth;
+    text-rendering: optimizeLegibility;
+}

@@ -1,0 +1,189 @@
+/* Generic styles */
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html {
+  font-family: sans-serif;
+  scroll-behavior: smooth;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+
+/* START HERE */
+
+
+/* -- navigation bar -- */
+.flex-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: rgb(24, 19, 19);
+}
+
+.logo a {
+  color: deepskyblue;
+}
+
+.logo {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+/* gets rid of bullets on list and makes text uppercase */
+.logo,
+.main-nav {
+  list-style: none;
+  text-transform: uppercase;
+}
+
+/* gets rid of underline on links and spaces out letters */
+.logo a,
+.main-nav a {
+  text-decoration: none;
+  letter-spacing: 0.45rem;
+}
+
+.logo a:hover {
+  color: red;
+}
+
+.main-nav {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  width: 100%;
+}
+
+.main-nav a {
+  display: block;
+  padding: 1em;
+  color: white;
+}
+
+.main-nav a:hover {
+  background: #00ace6;
+}
+
+.main-nav a {
+  text-align: center;
+  padding: 10px;
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.main-nav li:last-of-type a {
+  border-bottom: none;
+ margin-bottom: 3px;
+}
+
+@media only screen and (min-width: 35em) {
+  body {
+    background-color: purple;
+  }
+
+  .main-nav {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .main-nav a {
+    text-align: center;
+    padding: 10px;
+    border-top: none;
+    border-bottom: none;
+  }
+}
+
+/* Desktop Styles */
+@media only screen and (min-width: 60em) {
+  body {
+    background-color: orange;
+  }
+
+  .logo {
+    margin-left: 25px;
+  }
+
+  .flex-container {
+
+    flex-direction: row;
+
+  }
+
+  .main-nav {
+
+    justify-content: flex-end;
+  }
+
+  .main-nav a {
+    padding: 10px 25px;
+  }
+}
+
+/* end of navbar */
+
+
+
+/* grid experiment */
+
+.header-wrapper {
+    width: 600px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    grid-gap: 1rem;
+    /* transform: rotate(-45deg); */
+} 
+.header-wrapper h1 {
+  color: white;
+  font-size: calc(1.3rem + 1.8vw);
+  margin: 0;
+  line-height: 1.2em;
+  text-transform: uppercase;
+}
+.header-wrapper h1:nth-child(1) {
+  grid-column: 1 / -1;
+  text-align: left;
+  grid-row: 2;
+  z-index: 10;
+}
+.header-wrapper h1:nth-child(2) {
+  color: #f9423a;
+  writing-mode: vertical-lr;
+  grid-column: 2;
+  grid-row: 4 / 5;
+  margin-top: -10px;
+  margin-right: -10px;
+}
+
+.vertical {
+    transform:rotate(90deg);
+    grid-column:1;
+    grid-row: 1/5;
+    color: white;
+    border-top: 10px solid white;
+    justify-self: start;
+
+
+}
+.top-text {
+    grid-column:2;
+    grid-row: 1;
+}
+
+.main-footer{
+    grid-row: -1;
+    display: flex;
+    flex-direction: column;
+}
