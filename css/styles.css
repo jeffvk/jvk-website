@@ -20,11 +20,15 @@ body {
 }
 
 .hero {
-  background: url('img/infinitylarge.jpg') center no-repeat;
+  background: url(img/infinitylarge.jpg) no-repeat center;
+   -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
   background-size: cover;
   padding: 4rem 1rem;
   margin: 0;
 }
+ 
 
 /* START HERE */
 
